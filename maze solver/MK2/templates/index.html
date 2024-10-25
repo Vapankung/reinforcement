@@ -1,0 +1,37 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maze Solver AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Maze Solver AI using Deep Q-Learning</h1>
+    <canvas id="mazeCanvas" width="400" height="400"></canvas>
+    <br>
+    <button id="solveButton">Solve Maze</button>
+    <button id="clearButton">Clear Maze</button>
+    <button id="randomButton">Random Maze</button>
+    <br>
+    <label for="mazeSize">Maze Size:</label>
+    <select id="mazeSize">
+        <option value="4">4x4</option>
+        <option value="6">6x6</option>
+        <option value="8">8x8</option>
+        <option value="10">10x10</option>
+    </select>
+    <label for="difficulty">Difficulty:</label>
+    <select id="difficulty">
+        <option value="0.1">Easy</option>
+        <option value="0.3" selected>Medium</option>
+        <option value="0.5">Hard</option>
+    </select>
+    <br>
+    <input type="file" id="mazeImageInput" accept="image/*">
+    <br>
+    <p id="message" class="hidden"></p>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
